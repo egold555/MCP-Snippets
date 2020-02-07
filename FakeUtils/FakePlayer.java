@@ -15,7 +15,7 @@ import net.minecraft.world.World;
 public class FakePlayer extends EntityPlayerSP {
 
 	public FakePlayer(Minecraft mc, World world) {
-		this(mc, world, mc.getSession().getProfile());
+		this(mc, world, checkNullGameProfile());
 	}
 	
 	public FakePlayer(Minecraft mc, World world, GameProfile gp) {
@@ -43,5 +43,14 @@ public class FakePlayer extends EntityPlayerSP {
 	@Override
 	public float getEyeHeight() {
 		return 1.82F;
+	}
+	
+	//Some people were experiencing a null GameProfile for their session
+	//Not sure why, but his is a fix for it
+	private static GameProfile checkNullGameProfile() {
+		if(Minecraft.getMinecraft().getSession() == null || Minecraft.getMinecraft().getSession().getProfile() == null) {
+			return new GameProfile(UUID.randomUUID(), "FakePlayer");
+		}
+		return Minecraft.getMinecraft().getSession().getProfile();
 	}
 }
