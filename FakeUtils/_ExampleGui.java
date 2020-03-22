@@ -35,7 +35,6 @@ public class ExampleGui extends GuiScreen {
 		world = new FakeWorld(new WorldInfo(new NBTTagCompound()));
 
 		player = new FakePlayer(mc, world, new GameProfile(UUID.randomUUID(), "FakePlayer"));
-		player.setAllSkinLayersEnabled();
 		player.setArrowCountInEntity(4);
 
 		sheep = new EntitySheep(world);
