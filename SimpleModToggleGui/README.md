@@ -6,3 +6,6 @@ Uses [[GuiScrollExample]](https://github.com/egold555/MCP-Snippets/tree/master/G
 
 # How to use
 open "GuiModToggle.java" like any other Gui.
+
+# Example Sreenshot
+![](https://raw.githubusercontent.com/egold555/MCP-Snippets/master/SimpleModToggleGui/screenshot.png)
