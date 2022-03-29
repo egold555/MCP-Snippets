@@ -271,36 +271,36 @@ public class NBTColorizer {
 	private static ITextComponent toFormattedComponentDouble(NBTTagDouble tag, String indentation, int indentDepth) {
 		//return (new StringTextComponent(String.valueOf(this.data))).appendSibling(itextcomponent).mergeStyle(SYNTAX_HIGHLIGHTING_NUMBER);
 		ITextComponent t1 = mergeStyle(new TextComponentString("d"), SYNTAX_HIGHLIGHTING_NUMBER_TYPE);
-		return mergeStyle(new TextComponentString(tag.toString()), SYNTAX_HIGHLIGHTING_NUMBER).appendSibling(t1);
+		return mergeStyle(new TextComponentString(String.valueOf(tag.getDouble())), SYNTAX_HIGHLIGHTING_NUMBER).appendSibling(t1);
 	}
 
 	private static ITextComponent toFormattedComponentByte(NBTTagByte tag, String indentation, int indentDepth) {
 		//return (new StringTextComponent(String.valueOf(this.data))).appendSibling(itextcomponent).mergeStyle(SYNTAX_HIGHLIGHTING_NUMBER);
 		ITextComponent t1 = mergeStyle(new TextComponentString("b"), SYNTAX_HIGHLIGHTING_NUMBER_TYPE);
-		return mergeStyle(new TextComponentString(tag.toString()), SYNTAX_HIGHLIGHTING_NUMBER).appendSibling(t1);
+		return mergeStyle(new TextComponentString(String.valueOf(tag.getByte())), SYNTAX_HIGHLIGHTING_NUMBER).appendSibling(t1);
 	}
 
 	private static ITextComponent toFormattedComponentLong(NBTTagLong tag, String indentation, int indentDepth) {
 		//return (new StringTextComponent(String.valueOf(this.data))).appendSibling(itextcomponent).mergeStyle(SYNTAX_HIGHLIGHTING_NUMBER);
 		ITextComponent t1 = mergeStyle(new TextComponentString("L"), SYNTAX_HIGHLIGHTING_NUMBER_TYPE);
-		return mergeStyle(new TextComponentString(tag.toString()), SYNTAX_HIGHLIGHTING_NUMBER).appendSibling(t1);
+		return mergeStyle(new TextComponentString(String.valueOf(tag.getLong())), SYNTAX_HIGHLIGHTING_NUMBER).appendSibling(t1);
 	}
 
 	private static ITextComponent toFormattedComponentShort(NBTTagShort tag, String indentation, int indentDepth) {
 		//return (new StringTextComponent(String.valueOf(this.data))).appendSibling(itextcomponent).mergeStyle(SYNTAX_HIGHLIGHTING_NUMBER);
 		ITextComponent t1 = mergeStyle(new TextComponentString("s"), SYNTAX_HIGHLIGHTING_NUMBER_TYPE);
-		return mergeStyle(new TextComponentString(tag.toString()), SYNTAX_HIGHLIGHTING_NUMBER).appendSibling(t1);
+		return mergeStyle(new TextComponentString(String.valueOf(tag.getShort())), SYNTAX_HIGHLIGHTING_NUMBER).appendSibling(t1);
 	}
 
 	private static ITextComponent toFormattedComponentFloat(NBTTagFloat tag, String indentation, int indentDepth) {
 		//return (new StringTextComponent(String.valueOf(this.data))).appendSibling(itextcomponent).mergeStyle(SYNTAX_HIGHLIGHTING_NUMBER);
 		ITextComponent t1 = mergeStyle(new TextComponentString("f"), SYNTAX_HIGHLIGHTING_NUMBER_TYPE);
-		return mergeStyle(new TextComponentString(tag.toString()), SYNTAX_HIGHLIGHTING_NUMBER).appendSibling(t1);
+		return mergeStyle(new TextComponentString(String.valueOf(tag.getFloat())), SYNTAX_HIGHLIGHTING_NUMBER).appendSibling(t1);
 	}
 
 	private static ITextComponent toFormattedComponentInteger(NBTTagInt tag, String indentation, int indentDepth) {
 		//return (new TextComponentString(tag.toString()).mergeStyle(SYNTAX_HIGHLIGHTING_NUMBER);
-		return mergeStyle(new TextComponentString(tag.toString()), SYNTAX_HIGHLIGHTING_NUMBER);
+		return mergeStyle(new TextComponentString(String.valueOf(tag.getInt())), SYNTAX_HIGHLIGHTING_NUMBER);
 	}
 
 	private static ITextComponent toFormattedComponentString(NBTTagString tag, String indentation, int indentDepth) {
